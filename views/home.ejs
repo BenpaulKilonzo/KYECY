@@ -1,0 +1,373 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYECY</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+        * {
+	        box-sizing: border-box;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        h2, h3, a {
+            color: #34495e;
+        }
+        a {
+            text-decoration: none;
+        }
+        .logo {
+            margin: 0;
+            font-size: 1.45em;
+            border: 2px solid #ccc;
+            border-radius: 2px;
+            margin-left: 2px;
+        }
+        .main-nav {
+            margin-top: 5px;
+        }
+        .logo a,
+        .main-nav a {
+            padding: 10px 15px;
+            text-transform: uppercase;
+            text-align: center;
+            display: block;
+        }
+        .main-nav a {
+            color: #34495e;
+            font-size: .99em;
+        }
+        .main-nav a:hover {
+            color: #718daa;
+        }
+        .header {
+            padding-top: .5em;
+            padding-bottom: .5em;
+            border: 1px solid #a2a2a2;
+            background-color: #f4f4f4;
+            box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+        @media (min-width: 769px) {
+            .header, .main-nav {
+                display: flex;
+            }
+            .header {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                margin: 0 auto;
+                /* max-width: 1150px; */
+            }
+        }
+        @media (min-width: 1025px) {
+            .header {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        .jumbotron {
+            text-align: center;
+            height: 80vh;
+            background-image: url('/home/images/mon.gif');
+            box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.7;
+        }
+        .jumbotron p {
+            font-size: 15px;
+        }
+        .text-shade {
+            color: #39424E;
+            padding: 10px;
+            padding-top: 30px;
+            margin-top: 5px;
+        }
+        .jumbotron a {
+            background: #39424E;
+            background: -webkit-linear-gradient(to right, #39424E, #39424E);
+            background: linear-gradient(to right, #39424E, #39424E);
+            color: azure !important;
+            box-shadow: 0 5px 5px 5px grey;
+        }
+        .btn-home {
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .jumbotron2 {
+            margin-top: -20px;
+            background-color: beige;
+            box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+            height: 250px;
+            padding-bottom: 30px;
+            text-align: center;
+        }
+        .jumbotron2 h1 {
+            padding: 10px;
+            margin-bottom: 10px;
+            padding-top: 30px;
+            font-size: 60px;
+        }
+        .text-shade {
+            font-weight: bolder !important;
+            font-size: 200px !important;
+            text-shadow:
+                3px 3px 0 white,
+                -1px -1px 0 white,
+                1px -1px 0 white,
+                -1px 1px 0 white,
+                1px 1px 0 white;
+        }
+        .card-deck {
+            padding: 50px;
+            width: 100%;
+            font-size: 15px;
+            background-color: #39424E;
+            border-bottom: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .card-header {
+            text-align: center;
+            background: #39424E;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #39424E, #39424E);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #39424E, #39424E);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            box-shadow: 0 5px 5px 5px black;
+            color: white !important;
+        }
+        .card-text {
+            padding: 30px;
+            padding-top: 70px;
+        }
+        .top {
+            margin-bottom: 40px;
+            box-shadow: 0 5px 5px 1px black;
+        }
+        #footer {
+            background: #39424E;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #39424E, #39424E);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #39424E, #39424E);
+        }
+        .section-title {
+            color: #2ddf5c;
+            text-align: center;
+        }
+        #key-features .section-title {
+            color: white;
+            margin: 2rem;
+        }
+        .plan__list {
+            width: 100%;
+            text-align: center;
+        }
+        .plan {
+            background: #d5ffdc;
+            text-align: center;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            width: 100%;
+        }
+        .plan--highlighted {
+            background: beige;;
+            color: white;
+        }
+        .plan__annotation {
+            background: white;
+            color: beige;;
+            padding: 0.5rem;
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+        }
+        .plan__title {
+            color: #0e4f1f;
+        }
+        .plan__price {
+            color: #858585;
+        }
+        .plan--highlighted .plan__title {
+            color: white;
+        }
+        .plan--highlighted .plan__price {
+            color: #0e4f1f;
+        }
+        .plan__features {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .plan__feature {
+            margin: 0.5rem 0;
+        }
+        .plan {
+            display: inline-block;
+            width: 30%;
+            vertical-align: middle;
+            min-width: 13rem;
+            max-width: 25rem;
+        }
+        .plan--highlighted {
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+        }
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=email], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .contact {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 10px 450px;
+            margin-bottom: 120px;
+        }   
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: bisque;
+            color: white;
+            text-align: center;
+        }
+        .plain-footer {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+		<h1 class="logo"><a href="/">Kyecy</a></h1>
+        <ul class="main-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/user/login">Login</a></li>
+            <li><a href="/user/new">SignUp</a></li>
+        </ul>
+	</header> 
+    <!-- Banner -->
+    <div class="jumbotron">
+        <h1 class="text-shade">KYECY<h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem debitis quam cum ut aut pariatur rem, libero, delectus quis omnis ad, numquam culpa corporis fugiat ea saepe iste quibusdam adipisci!</p>
+        <a class="btn-home" href="/user/login" role="button">Login</a>
+        <a class="btn-home" href="/user/new" role="button">SignUp</a>
+    </div>
+    <div class="jumbotron2">
+        <h1>About us!</h1>
+        <hr>
+        <p>
+            An initiative to empower the small lenders and collaborators to lend and borrow money from themselves. A
+            commuity that believes in helping each other
+            A community that stands together at their time of need.
+        </p>
+    </div>
+    <div class="top"></div>
+    <section id="plans">
+        <h1 class="section-title">What people say about us</h1>
+        <div class="plan__list">
+            <article class="plan">
+                <h1 class="plan__title">FEATURE</h1>
+                <h3>We, are a small startup and needed help to launch our business Karz helped us
+                    give the much needed impetus</h3>
+            </article>
+            <article class="plan plan--highlighted">
+                <h1 class="plan__title">FEATURE</h1>
+                <h3>We, are a small startup and needed help to launch our business Karz helped us
+                    give the much needed impetus</h3>
+            </article>
+            <article class="plan">
+                <h1 class="plan__title">FEATURE</h1>
+                <h3>We, are a small startup and needed help to launch our business Karz helped us
+                    give the much needed impetus</h3>
+            </article>
+        </div>
+    </section>
+    <div class="contact">
+        <form action="/action_page.php">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name..">
+      
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your email..">
+      
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+      
+          <input type="submit" value="Submit">
+        </form>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="inner">
+            <div class="content">
+                <section>
+                    <h3>Contact Us!</h3>
+                </section>
+                <section>
+                    <h4></h4>
+                    <ul class="plain-footer">
+                        <li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
+                        <li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+                        <li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
+                        <li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="copyright">
+                Sign in as <a href="/admin/login">Admin</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
